@@ -5,21 +5,20 @@ import{Avatar, AvatarImage,AvatarFallback} from '@/components/ui/avatar'
 import {
     DropdownMenu,
     DropdownMenuContent,
-    DropdownMenuGroup,
     DropdownMenuItem,
     DropdownMenuLabel,
-    DropdownMenuPortal,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
-
+  } from "@/components/ui/dropdown-menu";
+import  ThemeToggler  from "@/components/ThemeToggler";
 const Navbar = () => {
     return <div className="bg-primary dark:bg-slate-700 py-2 px-5 flex justify-between text-white">
         <Link href='/'>
         <Image src={logo} alt='dashboard_logo' width={60} />
         </Link>
-        
-        <DropdownMenu>
+        <div className="flex items-center">
+          <ThemeToggler/>
+          <DropdownMenu>
       <DropdownMenuTrigger asChild className="focus:outline-none">
       <Avatar>
             <AvatarImage src='https://github.com/shadcn.png' alt='@shadcn'/>
@@ -32,7 +31,9 @@ const Navbar = () => {
         <DropdownMenuItem><Link href='/profile'>Profile</Link></DropdownMenuItem>
         <DropdownMenuItem><Link href='/auth'>Logout</Link></DropdownMenuItem>
       </DropdownMenuContent>
-    </DropdownMenu>
+     </DropdownMenu>
+        </div>
+       
     </div>
 };
  

@@ -11,7 +11,7 @@ import {
 import {LayoutDashboard, Newspaper, Folders, CreditCard, Settings, User} from 'lucide-react'
 import Link from "next/link";
 const Sidebar = () => {
-    return (<Command className="rounded-none bg-secondary">
+    return (<Command className="rounded-none bg-secondary h-[120vh]">
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
